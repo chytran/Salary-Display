@@ -20,22 +20,22 @@ namespace Salary_Display
         {
             // Get connection String
             string strcon = ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString;
-
+            var totalAmount = int.Parse(hours.Text) * int.Parse(salaryHourly.Text);
             // create sql connection to database
-            /*using(SqlConnection con = new SqlConnection(strcon))
+            using (SqlConnection con = new SqlConnection(strcon))
             {
                 con.Open();
                 SqlCommand cmd = new SqlCommand("UPDATE salary" +
-                    "SET Amount = ", con);
+                    "SET Amount = " + totalAmount, con);
                 SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    
+
                 }
-            } */
+            }
         }
 
-        protected void calculate(object sneder, EventArgs e)
+        public void calculate(object sneder, EventArgs e)
         {
             var totalAmount = int.Parse(hours.Text) * int.Parse(salaryHourly.Text);
             display.Text = "$" + totalAmount.ToString();
