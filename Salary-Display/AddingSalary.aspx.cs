@@ -37,7 +37,8 @@ namespace Salary_Display
 
         protected void calculate(object sneder, EventArgs e)
         {
-            var totalAmount = hours.Text * salaryHourly.Text;
+            var totalAmount = int.Parse(hours.Text) * int.Parse(salaryHourly.Text);
+            display.Text = "$" + totalAmount.ToString();
         }
     }
 }

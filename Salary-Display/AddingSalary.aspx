@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AddingSalary.aspx.cs" Inherits="Salary_Display._Default" %>
+﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AddingSalary.aspx.cs" Inherits="Salary_Display.AddingSalary" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
@@ -8,11 +8,11 @@
         <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
     </div>
 
-    <asp:Label ID="Label1" runat="server" Text="Overall Amount" onClick="calculate"></asp:Label>
+    <asp:Label ID="Label1" runat="server" Text="Overall Amount"></asp:Label>
     <asp:TextBox ID="hours" runat="server"></asp:TextBox>
     <asp:TextBox ID="salaryHourly" runat="server"></asp:TextBox>
 
-    <asp:Button ID="Button1" runat="server" Text="Button" />
+    <asp:Button ID="Button1" runat="server" Text="Button" onClick="calculate"/>
 
-
+    <asp:Label ID="display" runat="server" Text="$0.00"></asp:Label>
 </asp:Content>
