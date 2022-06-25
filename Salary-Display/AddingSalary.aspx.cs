@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 
 namespace Salary_Display
 {
-    public partial class _Default : Page
+    public partial class AddingSalary : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -22,17 +22,22 @@ namespace Salary_Display
             string strcon = ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString;
 
             // create sql connection to database
-            using(SqlConnection con = new SqlConnection(strcon))
+            /*using(SqlConnection con = new SqlConnection(strcon))
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("select * from salary", con);
+                SqlCommand cmd = new SqlCommand("UPDATE salary" +
+                    "SET Amount = ", con);
                 SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    SalaryGrid.DataSource = reader;
-                    SalaryGrid.DataBind();
+                    
                 }
-            }
+            } */
+        }
+
+        protected void calculate(object sneder, EventArgs e)
+        {
+            var totalAmount = hours.Text * salaryHourly.Text;
         }
     }
 }

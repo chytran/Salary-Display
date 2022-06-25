@@ -24,12 +24,30 @@ namespace Salary_Display
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// SalaryGrid control.
+        /// hours control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView SalaryGrid;
+        protected global::System.Web.UI.WebControls.TextBox hours;
+
+        /// <summary>
+        /// salaryHourly control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox salaryHourly;
+
+        /// <summary>
+        /// Button1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }
