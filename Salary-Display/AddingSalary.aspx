@@ -12,7 +12,7 @@
     <asp:TextBox ID="hours" runat="server"></asp:TextBox>
     <asp:TextBox ID="salaryHourly" runat="server"></asp:TextBox>
 
-    <asp:Button ID="Button1" runat="server" Text="Button" onClick="calculate"/>
+    <asp:Button ID="addSalary" runat="server" Text="Button" onClick="calculate"/>
 
     <asp:Label ID="display" runat="server" Text="$0.00"></asp:Label>
 </asp:Content>
