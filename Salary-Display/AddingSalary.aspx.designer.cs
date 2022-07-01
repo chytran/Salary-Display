@@ -42,13 +42,13 @@ namespace Salary_Display
         protected global::System.Web.UI.WebControls.TextBox salaryHourly;
 
         /// <summary>
-        /// Button1 control.
+        /// addSalary control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button addSalary;
 
         /// <summary>
         /// display control.
