@@ -8,7 +8,10 @@
         <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
     </div>
 
-    <asp:Label ID="Label1" runat="server" Text="Overall Amount" onClick="loadData"></asp:Label>
-    <asp:GridView ID="SalaryGrid" runat="server"></asp:GridView>
+    <asp:Label ID="Label1" runat="server" Text="Overall Amount"></asp:Label>
+    <asp:Button ID="Button1" runat="server" Text="Button" onClick="onView"/>
+    <asp:GridView ID="GridView1" runat="server">
+
+    </asp:GridView>
 
 </asp:Content>
