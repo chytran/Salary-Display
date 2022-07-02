@@ -26,7 +26,7 @@ namespace Salary_Display
             {
                 con.Open();
                 SqlCommand cmd = new SqlCommand("UPDATE salary " +
-                    "SET Amount = " + totalAmount + " WHERE Name = 'Josh'", con);
+                    "SET Amount = Amount + " + totalAmount + " WHERE Name = 'Josh'", con);
                 SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
