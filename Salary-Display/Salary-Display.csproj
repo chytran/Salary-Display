@@ -111,6 +111,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="CSS\main.css" />
     <Content Include="Content\Site.css" />
     <Content Include="AddingSalary.aspx" />
     <Content Include="Default.aspx" />
