@@ -74,9 +74,10 @@ html {
 
 body {
     font-family: var(--body-font);
-    font-size: var(--normal-font-size);
+    font-size: var(--h1-font-size);
     margin: var(--header-height) 0 0 0;
-    background-color: var(--body-color);
+    /*background-color: var(--body-color);*/
+    background-color: Blue;
     color: var(--text-color);
 }
 
@@ -124,4 +125,35 @@ input {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.add-delete {
+    height: 10%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.button-change {
+    text-align: center;
+    width: 5rem;
+    color: #FFF;
+    box-shadow: 2px 2px 5px #121212;
+    transition: 0.4s ease-out;
+}
+
+.button-change:hover {
+    padding: 1rem 0.75rem;
+    opacity: 0.9;
+    transition: 0.4s ease-out;
+}
+
+.color-blue {
+    background: #59ABE3;
+}
+
+.color-red {
+    background: #D24D57;
 }
