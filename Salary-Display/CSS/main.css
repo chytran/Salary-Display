@@ -77,7 +77,7 @@ body {
     font-size: var(--h1-font-size);
     margin: var(--header-height) 0 0 0;
     /*background-color: var(--body-color);*/
-    background-color: Blue;
+    background-color: #121212;
     color: var(--text-color);
 }
 
