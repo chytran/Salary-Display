@@ -1,2 +1,2 @@
 ﻿Kevin Tran
--Set up delete salary page to reduce amount incase of emergencies
+-Prevent negative numbers
