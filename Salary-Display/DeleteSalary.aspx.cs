@@ -25,8 +25,12 @@ namespace Salary_Display
             using (SqlConnection con = new SqlConnection(strcon))
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("UPDATE salary " +
-                    "SET Amount = Amount - " + totalAmount + " WHERE Name = 'Josh'", con);
+                SqlCommand cmd = new SqlCommand("" +
+                    "IF ((Amount - totalAmount) < 0)" +
+                    "UPDATE salary " +
+                    "SET Amount = Amount - " + totalAmount + " WHERE Name = 'Josh'"
+                    
+                    , con);
                 SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {

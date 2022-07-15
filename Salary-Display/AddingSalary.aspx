@@ -137,18 +137,17 @@ input {
     <asp:Label class="overall" ID="Label1" runat="server" Text="Overall Amount"></asp:Label>
     <div>
         <h2>Hours: </h2>
-        <asp:TextBox class="hours" ID="TextBox1" runat="server"></asp:TextBox>
+        <asp:TextBox class="hours" ID="hours" runat="server"></asp:TextBox>
     </div>
     
     <div>
         <h2>Salary: </h2>
-        <asp:TextBox class="salary" ID="TextBox2" runat="server"></asp:TextBox>
+        <asp:TextBox class="salary" ID="salaryHourly" runat="server"></asp:TextBox>
     </div>
     
-    <h2>Salary: </h2>
-    <asp:TextBox class="salary" ID="salaryHourly" runat="server"></asp:TextBox>
+    
 
-    <asp:Button ID="addSalary" runat="server" Text="Button" onClick="loadData"/>
+    <asp:Button ID="Button1" runat="server" Text="Button" onClick="loadData"/>
 
     <asp:Label ID="display" runat="server" Text="$0.00"></asp:Label>
 </asp:Content>
