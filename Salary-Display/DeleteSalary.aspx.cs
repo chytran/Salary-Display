@@ -25,24 +25,26 @@ namespace Salary_Display
             using (SqlConnection con = new SqlConnection(strcon))
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("" +
-                    "IF ((Amount - totalAmount) < 0)" +
-                    "UPDATE salary " +
-                    "SET Amount = Amount - " + totalAmount + " WHERE Name = 'Josh'"
-                    
-                    , con);
-                SqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
+                if(totalAmount < 0)
                 {
+                    totalAmount = 0;
+                } else
+                {
+                    SqlCommand cmd = new SqlCommand("UPDATE salary " +
+                        "SET Amount = Amount - " + totalAmount + " WHERE Name = 'Josh'"
+                    
+                        , con);
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
 
+                    }
                 }
+                
             }
+            Response.Redirect("Default.aspx");
         }
 
-        public void calculate(object sneder, EventArgs e)
-        {
-            var totalAmount = int.Parse(hours.Text) * int.Parse(salaryHourly.Text);
-            display.Text = "$" + totalAmount.ToString();
-        }
+
     }
 }

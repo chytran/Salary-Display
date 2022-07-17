@@ -2,12 +2,10 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <style>
-               /*=============== VARIABLES CSS ===============*/
+    <style type/css>
+       /*=============== VARIABLES CSS ===============*/
 :root {
-   
-
---header-height: 3rem;
+    --header-height: 3rem;
     /*========== Colors ==========*/
     /* Change favorite color to match images */
     /*Green dark 190 - Green 171 - Grren Blue 200*/
@@ -120,18 +118,72 @@ input {
     outline: none;
 }
 
-.overall {
-    margin-top: 3rem;
+.section {
+    padding: 4.5rem 0 2.5rem;
+    width: 100%;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.add-delete {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.button-change {
+    text-align: center;
+    width: 7rem;
+    color: #FFF;
+    box-shadow: 2px 2px 5px #121212;
+    transition: 0.4s ease-out;
+}
+
+.button-change:hover {
+    padding: 0.8rem 0.75rem;
+    opacity: 0.9;
+    transition: 0.4s ease-out;
+    text-decoration: none;
+    color: #FFF;
+}
+
+.color-blue {
+    background: #59ABE3;
+}
+
+.color-red {
+    background: #D24D57;
 }
 
 .hours {
-    border: 1px solid black;
+    border: 1px solid #121212;
+    font-size: 2rem;
 }
 
 .salary {
-    border: 1px solid black;
+    border: 1px solid #121212;
+    font-size: 2rem;
 }
-    </style>
+
+.addButton {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.display {
+    margin-top: 1rem;
+    color: #121212;
+}
+   </style>
 
 
     <asp:Label class="overall" ID="Label1" runat="server" Text="Overall Amount"></asp:Label>
@@ -147,7 +199,5 @@ input {
     
     
 
-    <asp:Button ID="Button1" runat="server" Text="Button" onClick="loadData"/>
-
-    <asp:Label ID="display" runat="server" Text="$0.00"></asp:Label>
+    <asp:Button class="addButton" ID="Button1" runat="server" Text="Add" onClick="loadData"/>
 </asp:Content>

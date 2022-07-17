@@ -22,7 +22,13 @@ namespace Salary_Display
             string strcon = ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString;
             var totalAmount = int.Parse(hours.Text) * int.Parse(salaryHourly.Text);
             // create sql connection to database
-            using (SqlConnection con = new SqlConnection(strcon))
+
+            if (totalAmount < 0)
+            {
+                totalAmount = 0;
+            } else
+            {
+                using (SqlConnection con = new SqlConnection(strcon))
             {
                 con.Open();
                 SqlCommand cmd = new SqlCommand("UPDATE salary " +
@@ -33,12 +39,11 @@ namespace Salary_Display
 
                 }
             }
+            }
+            
+            Response.Redirect("Default.aspx");
         }
 
-        public void calculate(object sneder, EventArgs e)
-        {
-            var totalAmount = int.Parse(hours.Text) * int.Parse(salaryHourly.Text);
-            display.Text = "$" + totalAmount.ToString();
-        }
+        
     }
 }
