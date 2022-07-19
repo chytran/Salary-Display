@@ -186,7 +186,7 @@ input {
    </style>
 
 
-    <asp:Label class="overall" ID="Label1" runat="server" Text="Overall Amount"></asp:Label>
+    <asp:Label class="overall" ID="Label1" runat="server" Text="Add Hours and Salary Per hour" style="margin-top: 3rem;"></asp:Label>
     <div>
         <h2>Hours: </h2>
         <asp:TextBox class="hours" ID="hours" runat="server"></asp:TextBox>
