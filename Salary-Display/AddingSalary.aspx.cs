@@ -32,7 +32,7 @@ namespace Salary_Display
             {
                 con.Open();
                 SqlCommand cmd = new SqlCommand("UPDATE salary " +
-                    "SET Amount = Amount + " + totalAmount + ", Hours = Hours + " + hours + " WHERE Name = 'Josh'", con);
+                    "SET Amount = Amount + " + totalAmount + ", Hours = Hours + " + hours.Text + " WHERE Name = 'Josh'", con);
                 SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {

@@ -20,7 +20,7 @@ namespace Salary_Display
             using (SqlConnection con = new SqlConnection(strcon))
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("SELECT Name, Amount FROM salary", con);
+                SqlCommand cmd = new SqlCommand("SELECT Name, Amount, Hours FROM salary", con);
                 SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {

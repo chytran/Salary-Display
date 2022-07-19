@@ -31,7 +31,7 @@ namespace Salary_Display
                 } else
                 {
                     SqlCommand cmd = new SqlCommand("UPDATE salary " +
-                       "SET Amount = Amount - " + totalAmount + ", Hours = Hours - " + hours + " WHERE Name = 'Josh'"
+                       "SET Amount = Amount - " + totalAmount + ", Hours = Hours - " + hours.Text + " WHERE Name = 'Josh'"
 
                         , con);
                     SqlDataReader reader = cmd.ExecuteReader();
